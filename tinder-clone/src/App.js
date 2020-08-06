@@ -11,20 +11,19 @@ import SwipeButtons from "./SwipeButtons";
 function App() {
   return (
     <div className="App">
+      <Router>
        <Header />
-
-    <Router>
-      <Switch>
-        <Route path="/chat">
-          <h1>I am Chat Page</h1>
-        </Route> 
-        <Route path="/">
-          <TinderCards />
-          <SwipeButtons />
-          </Route> 
+          <Switch>
+            <Route path="/chat">
+              <h1>I am Chat Page</h1>
+            </Route> 
+            <Route path="/">
+              <TinderCards />
+              <SwipeButtons />
+              </Route> 
 
 
-      </Switch>
+          </Switch>
 
          
 {/* Tinder Cards */}
