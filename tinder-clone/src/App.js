@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import Header from "./Header";
-
+import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
+import TinderCards from "./TinderCards"
 
 
 
@@ -9,14 +10,34 @@ import Header from "./Header";
 function App() {
   return (
     <div className="App">
-      <h1>Tinder Clone</h1>
+       <Header />
 
-    {/* Header */}
-    <Header />
-    {/* Tinder Cards */}
+    <Router>
+      <Switch>
+        <Route path="/chat">
+          <h1>I am Chat Page</h1>
+        </Route> 
+        <Route path="/">
+          <TinderCards />
+          </Route> 
+
+
+      </Switch>
+
+         
+{/* Tinder Cards */}
     {/* Buttons Below tinder cards*/ }
     {/* Chats Screen */}
     {/* Individual chat screen */}
+   
+   
+   
+   
+    </Router>
+
+
+
+    
 
     </div>
   );
