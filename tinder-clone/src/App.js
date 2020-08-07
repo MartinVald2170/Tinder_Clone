@@ -12,12 +12,14 @@ function App() {
   return (
     <div className="App">
       <Router>
-       <Header />
           <Switch>
             <Route path="/chat">
+            <Header backButton="/" />
               <h1>I am Chat Page</h1>
             </Route> 
             <Route path="/">
+            <Header />
+             
               <TinderCards />
               <SwipeButtons />
               </Route> 
